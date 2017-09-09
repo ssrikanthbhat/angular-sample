@@ -1,5 +1,6 @@
 import { Component, OnInit } from "@angular/core";
 import { IProduct } from "./product";
+import { ProductService } from "./product.service";
 @Component({
     selector: 'pm-products',
     templateUrl: './product-list.component.html',
@@ -33,6 +34,10 @@ export class ProductListComponent implements OnInit {
         "imageUrl": "http://openclipart.org/image/300px/svg_to_png/73/rejon_Hammer.png"
     }
 ];
+
+constructor(private productService: ProductService){
+    
+}
 ngOnInit(): void {
     console.log("onInit")
 }
