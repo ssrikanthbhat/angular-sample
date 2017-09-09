@@ -39,4 +39,5 @@ ngOnInit(): void {
     toggleImage(): void{
         this.showImage = !this.showImage
     }
+    onNotify(message: string): void {this.pageTitle = 'Product List: ' + message; }
 }
