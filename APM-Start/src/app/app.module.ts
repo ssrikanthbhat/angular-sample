@@ -14,7 +14,7 @@ import { PageNotFoundComponent } from "./home/pagenotfound.component";
 
 @NgModule({
   declarations: [
-    AppComponent,ProductListComponent, ConvertToSpacesPipe, StarComponent
+    AppComponent,ProductListComponent, ConvertToSpacesPipe, StarComponent, WelcomeComponent
   ],
   imports: [
     BrowserModule,
