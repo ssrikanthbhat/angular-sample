@@ -6,6 +6,8 @@ import { FormsModule } from "@angular/forms";
 import { ProductService } from "./product.service";
 import { ProductDetailComponent } from "./product-detail.component";
 import { ProductListComponent } from "./product-list.component";
+import { SharedModule } from './../shared/shared.module';
+import { ConvertToSpacesPipe } from "./ConvertToSpacesPipe";
 
 @NgModule({
   imports: [
@@ -16,10 +18,13 @@ import { ProductListComponent } from "./product-list.component";
       {path: 'products/:id',
       canActivate: [ ProductGuardService ],
       component: ProductDetailComponent }
-    ])
+    ]),
+    SharedModule
 
   ],
-  declarations: [],
+  declarations: [ ProductListComponent,
+    ProductDetailComponent,
+    ConvertToSpacesPipe],
   providers: [ProductService, ProductGuardService]
 })
 export class ProductModule { }
